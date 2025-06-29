@@ -19,11 +19,11 @@ public class CatActions {
         if (print) {
             System.out.printf("Теперь мне %d %s%n",
                     cat.getAge(),
-                    getAgeEnding(cat.getAge()));
+                    CatUtils.getAgeEnding(cat.getAge(), cat.getLang()));
         }
     }
 
-    private String getAgeEnding(int age) {
+    /*public String getAgeEnding(int age) {
         int tens = age / 10;
         int units = age % 10;
         String ageEnd = "год";
@@ -35,7 +35,7 @@ public class CatActions {
             ageEnd = "лет";
         }
         return ageEnd;
-    }
+    }*/
 
     public void fight(Cat opponent) {
 

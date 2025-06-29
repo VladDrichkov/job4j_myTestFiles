@@ -3,13 +3,15 @@ package ru.job4j.oop.cat.base;
 public class Cat {
     private String name;
     private int age;
+    private String lang;
     private final CatValidator validator;  // Храним валидатор как поле
 
     // Конструктор требует передать валидатор
-    public Cat(String name, int age, CatValidator validator) {
+    public Cat(String name, int age, String lang, CatValidator validator) {
         this.validator = validator;  // Сохраняем валидатор в поле
         setName(name);  // Используем сеттер для валидации
         setAge(age);
+        this.lang = lang; //TODO добавить валидацию
     }
 
     // Геттер для имени
@@ -38,6 +40,10 @@ public class Cat {
         } else {
             this.age = 1;  // Значение по умолчанию
         }
+    }
+
+    public String getLang() {
+        return lang;
     }
 
     public CatValidator getValidator() {
