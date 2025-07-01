@@ -39,8 +39,6 @@ public class CatUtils {
         if (lang.equals("en")) {
             ageEnd = (age == 1) ? "year" : "years"; // Английский вариант
         }
-        CatValidator val = new CatValidator();
-        Cat c = new Cat("test", 2, "en", val);
         return ageEnd;
     }
 }
